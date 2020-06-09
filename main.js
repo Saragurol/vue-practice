@@ -5,6 +5,7 @@ var app = new Vue({
     el: '#app',
     data: {
         product: "Socks",
+        image: "./assets/vue-prac-green-socks.jpg",
         description: "A pair of warm, fuzzy socks.",
         firstName: "Linda",
         lastName: "Saraguro",
