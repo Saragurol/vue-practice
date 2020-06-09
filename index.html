@@ -14,7 +14,9 @@
         </div>
         <div class="product-info">
           <h1>{{product}}</h1>
+          <a :href="link" target="_blank"> Learn more here</a>
         </div>
+        
       </div>
       <!-- <p>{{description}}</p>
       <h3>Got {{product + '?'}}</h1>
@@ -28,12 +30,13 @@
 </html>
 
 <!-- Summary Notes:
-- v-bind: binds an attribute to an expression 
+-v-bind: binds an attribute to an expression 
       ex. src (attribute) is binded to the (expression) "image". aka {{image}}
-- v-bind: shorthand is, : 
-- other attributes v-bind: can be used on is...
+-v-bind: shorthand is, : 
+-other attributes v-bind: can be used on is...
       ex. :href="url"
       ex. :title="toolTip"
       ex. :class="isActive"
       ex. :style="isStyled"
       ex. :disabled="isDisabled"
+-the target attribute inside an <a> tag specifies where the linked document will open when the link is clicked. The defualt is the current window. If target ="_blank", the link will open in a new tab
