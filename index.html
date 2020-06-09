@@ -10,11 +10,14 @@
     <div id="app">
       <div class="product">
         <div class="product-image">
-          <img v-bind:src="image" alt="img of a green sock">
+          <img v-bind:src="image" alt="A pair of green socks">
         </div>
         <div class="product-info">
           <h1>{{product}}</h1>
-          <a :href="link" target="_blank"> Learn more here</a>
+          <!-- <a :href="link" target="_blank"> Learn more here</a> -->
+          <p v-if="inStock">In Stock</p>
+          <p v-else>Out of Stock</p>
+          <span v-if="onSale" style="color:blue">On Sale!</span>
         </div>
         
       </div>
@@ -40,3 +43,12 @@
       ex. :style="isStyled"
       ex. :disabled="isDisabled"
 -the target attribute inside an <a> tag specifies where the linked document will open when the link is clicked. The defualt is the current window. If target ="_blank", the link will open in a new tab
+
+-There are Vue directives to conditionally render elements
+  v-if
+  v-else-if
+  v-else
+  v-show
+-if whatever is inside the directive's quotes is truthy, the element will diplay
+-you can use expressions inside the directive's quotes 
+-v-show only toggles visibility, it does not insert or remove the element from the DOM
